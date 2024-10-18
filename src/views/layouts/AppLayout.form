@@ -132,6 +132,9 @@
                 <Property name="text" type="java.lang.String" value="Dashboard"/>
                 <Property name="horizontalAlignment" type="int" value="10"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDashboardActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnVisitors">
               <Properties>
@@ -144,6 +147,9 @@
                 <Property name="text" type="java.lang.String" value="Visitors"/>
                 <Property name="horizontalAlignment" type="int" value="10"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVisitorsActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnAttendance">
               <Properties>
@@ -156,6 +162,9 @@
                 <Property name="text" type="java.lang.String" value="Attendance"/>
                 <Property name="horizontalAlignment" type="int" value="10"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAttendanceActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnSmsEmail">
               <Properties>
@@ -168,6 +177,9 @@
                 <Property name="text" type="java.lang.String" value="SMS / Email"/>
                 <Property name="horizontalAlignment" type="int" value="10"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSmsEmailActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnAdditionalFees">
               <Properties>
@@ -180,6 +192,9 @@
                 <Property name="text" type="java.lang.String" value="Additional Fees"/>
                 <Property name="horizontalAlignment" type="int" value="10"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAdditionalFeesActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnStudents">
               <Properties>
@@ -192,6 +207,9 @@
                 <Property name="text" type="java.lang.String" value="Students"/>
                 <Property name="horizontalAlignment" type="int" value="10"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnStudentsActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnResources">
               <Properties>
@@ -204,6 +222,9 @@
                 <Property name="text" type="java.lang.String" value="Resources"/>
                 <Property name="horizontalAlignment" type="int" value="10"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnResourcesActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnAuth">
               <Properties>
@@ -216,6 +237,9 @@
                 <Property name="text" type="java.lang.String" value="Authentication"/>
                 <Property name="horizontalAlignment" type="int" value="10"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAuthActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnSettings">
               <Properties>
@@ -228,6 +252,9 @@
                 <Property name="text" type="java.lang.String" value="Settings"/>
                 <Property name="horizontalAlignment" type="int" value="10"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSettingsActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

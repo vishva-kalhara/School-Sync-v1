@@ -5,10 +5,19 @@
 package views.layouts;
 
 import com.formdev.flatlaf.FlatClientProperties;
+import enums.LayoutPage;
 import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import views.internals.PnlAdditionalFees;
+import views.internals.PnlAttendance;
+import views.internals.PnlAuthentication;
+import views.internals.PnlDashboard;
+import views.internals.PnlResources;
+import views.internals.PnlSMSEmail;
+import views.internals.PnlSettings;
 import views.internals.PnlStudents;
+import views.internals.PnlVisitors;
 
 /**
  *
@@ -30,8 +39,51 @@ public class AppLayout extends javax.swing.JFrame {
         
         formDesign();
         
-        showForm(new PnlStudents());
-        changeSideButton(btnStudents);
+        changeForm(LayoutPage.STUDENTS);
+    }
+    
+    private void changeForm(LayoutPage page){
+        
+        switch (page) {
+            case DASHBOARD:
+                showForm(new PnlDashboard());
+                changeSideButton(btnDashboard);
+                break;
+            case VISITORS:
+                showForm(new PnlVisitors());
+                changeSideButton(btnVisitors);
+                break;
+            case ATTENDANCE:
+                showForm(new PnlAttendance());
+                changeSideButton(btnAttendance);
+                break;
+            case SMS_EMAIL:
+                showForm(new PnlSMSEmail());
+                changeSideButton(btnSmsEmail);
+                break;
+            case ADDITIONAL_FEES:
+                showForm(new PnlAdditionalFees());
+                changeSideButton(btnAdditionalFees);
+                break;
+            case STUDENTS:
+                showForm(new PnlStudents());
+                changeSideButton(btnStudents);
+                break;
+            case RESOURCES:
+                showForm(new PnlResources());
+                changeSideButton(btnResources);
+                break;
+            case AUTHENTICATION:
+                showForm(new PnlAuthentication());
+                changeSideButton(btnAuth);
+                break;
+            case SETTINGS:
+                showForm(new PnlSettings());
+                changeSideButton(btnSettings);
+                break;
+            default:
+                throw new AssertionError();
+        }
     }
 
     private void formDesign(){
@@ -113,46 +165,91 @@ public class AppLayout extends javax.swing.JFrame {
         btnDashboard.setForeground(new java.awt.Color(142, 142, 142));
         btnDashboard.setText("Dashboard");
         btnDashboard.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        btnDashboard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDashboardActionPerformed(evt);
+            }
+        });
 
         btnVisitors.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
         btnVisitors.setForeground(new java.awt.Color(142, 142, 142));
         btnVisitors.setText("Visitors");
         btnVisitors.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        btnVisitors.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVisitorsActionPerformed(evt);
+            }
+        });
 
         btnAttendance.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
         btnAttendance.setForeground(new java.awt.Color(142, 142, 142));
         btnAttendance.setText("Attendance");
         btnAttendance.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        btnAttendance.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAttendanceActionPerformed(evt);
+            }
+        });
 
         btnSmsEmail.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
         btnSmsEmail.setForeground(new java.awt.Color(142, 142, 142));
         btnSmsEmail.setText("SMS / Email");
         btnSmsEmail.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        btnSmsEmail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSmsEmailActionPerformed(evt);
+            }
+        });
 
         btnAdditionalFees.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
         btnAdditionalFees.setForeground(new java.awt.Color(142, 142, 142));
         btnAdditionalFees.setText("Additional Fees");
         btnAdditionalFees.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        btnAdditionalFees.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdditionalFeesActionPerformed(evt);
+            }
+        });
 
         btnStudents.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
         btnStudents.setForeground(new java.awt.Color(142, 142, 142));
         btnStudents.setText("Students");
         btnStudents.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        btnStudents.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnStudentsActionPerformed(evt);
+            }
+        });
 
         btnResources.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
         btnResources.setForeground(new java.awt.Color(142, 142, 142));
         btnResources.setText("Resources");
         btnResources.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        btnResources.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnResourcesActionPerformed(evt);
+            }
+        });
 
         btnAuth.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
         btnAuth.setForeground(new java.awt.Color(142, 142, 142));
         btnAuth.setText("Authentication");
         btnAuth.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        btnAuth.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAuthActionPerformed(evt);
+            }
+        });
 
         btnSettings.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
         btnSettings.setForeground(new java.awt.Color(142, 142, 142));
         btnSettings.setText("Settings");
         btnSettings.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        btnSettings.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSettingsActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlSideBarLayout = new javax.swing.GroupLayout(pnlSideBar);
         pnlSideBar.setLayout(pnlSideBarLayout);
@@ -219,6 +316,42 @@ public class AppLayout extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDashboardActionPerformed
+        changeForm(LayoutPage.DASHBOARD);
+    }//GEN-LAST:event_btnDashboardActionPerformed
+
+    private void btnVisitorsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVisitorsActionPerformed
+        changeForm(LayoutPage.VISITORS);
+    }//GEN-LAST:event_btnVisitorsActionPerformed
+
+    private void btnAttendanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAttendanceActionPerformed
+        changeForm(LayoutPage.ATTENDANCE);
+    }//GEN-LAST:event_btnAttendanceActionPerformed
+
+    private void btnSmsEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSmsEmailActionPerformed
+       changeForm(LayoutPage.SMS_EMAIL);
+    }//GEN-LAST:event_btnSmsEmailActionPerformed
+
+    private void btnAdditionalFeesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdditionalFeesActionPerformed
+        changeForm(LayoutPage.ADDITIONAL_FEES);
+    }//GEN-LAST:event_btnAdditionalFeesActionPerformed
+
+    private void btnStudentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStudentsActionPerformed
+        changeForm(LayoutPage.STUDENTS);
+    }//GEN-LAST:event_btnStudentsActionPerformed
+
+    private void btnResourcesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResourcesActionPerformed
+        changeForm(LayoutPage.RESOURCES);
+    }//GEN-LAST:event_btnResourcesActionPerformed
+
+    private void btnAuthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAuthActionPerformed
+        changeForm(LayoutPage.AUTHENTICATION);
+    }//GEN-LAST:event_btnAuthActionPerformed
+
+    private void btnSettingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSettingsActionPerformed
+        changeForm(LayoutPage.SETTINGS);
+    }//GEN-LAST:event_btnSettingsActionPerformed
 
     /**
      * @param args the command line arguments
