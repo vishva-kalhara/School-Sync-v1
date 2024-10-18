@@ -17,6 +17,13 @@ public class PnlSettings extends javax.swing.JPanel {
      */
     public PnlSettings() {
         initComponents();
+        
+        setDsign();
+    }
+    
+    private void setDsign(){
+        btnLogout.putClientProperty("JButton.buttonType", "borderless");
+        btnAccount.putClientProperty("JButton.buttonType", "borderless");
     }
 
     /**

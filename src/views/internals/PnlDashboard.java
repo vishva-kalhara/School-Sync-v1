@@ -17,6 +17,12 @@ public class PnlDashboard extends javax.swing.JPanel {
      */
     public PnlDashboard() {
         initComponents();
+        setDsign();
+    }
+    
+    private void setDsign(){
+        btnLogout.putClientProperty("JButton.buttonType", "borderless");
+        btnAccount.putClientProperty("JButton.buttonType", "borderless");
     }
 
     /**
